@@ -19,7 +19,7 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0 animate-fade-in">
             <img 
-              src={floodblockLogo} 
+              src={`${floodblockLogo}?v=${Date.now()}`} 
               alt="FloodBlock Logo" 
               className="h-20 mx-auto lg:mx-0 mb-8"
             />
@@ -54,7 +54,7 @@ const HeroSection = () => {
           <div className="lg:w-1/2 flex justify-center animate-fade-in">
             <div className="relative">
               <img 
-                src={floodblockProduct} 
+                src={`${floodblockProduct}?v=${Date.now()}`} 
                 alt="FloodBlock Flood Barrier installed at door" 
                 className="max-w-full h-auto rounded-lg shadow-primary"
               />

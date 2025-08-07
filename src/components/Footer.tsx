@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-2">
             <img 
-              src={floodblockLogo} 
+              src={`${floodblockLogo}?v=${Date.now()}`} 
               alt="FloodBlock Logo" 
               className="h-12 mb-4 brightness-0 invert"
             />
