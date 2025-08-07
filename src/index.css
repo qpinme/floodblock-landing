@@ -17,16 +17,17 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* FloodBlock Brand Colors */
+    --primary: 235 59% 39%; /* FloodBlock Blue */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 67 89% 52%; /* FloodBlock Yellow */
+    --secondary-foreground: 235 59% 39%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 220 13% 91%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: 220 13% 91%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,7 +35,13 @@ All colors MUST be HSL.
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 235 59% 39%;
+
+    /* Custom FloodBlock Variables */
+    --hero-gradient: linear-gradient(135deg, hsl(235 59% 39%), hsl(235 69% 49%));
+    --accent-gradient: linear-gradient(135deg, hsl(67 89% 52%), hsl(57 89% 62%));
+    --shadow-primary: 0 10px 30px -10px hsl(235 59% 39% / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.1);
 
     --radius: 0.5rem;
 
@@ -101,5 +108,13 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .bg-grid-pattern {
+    background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
   }
 }
