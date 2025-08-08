@@ -27,12 +27,11 @@ jobs:
           node-version: 20
 
       - name: Install deps
-        run: npm ci
+        run: npm install
 
       - name: Build
         run: npm run build
 
-      # SPA safety: lets refresh deep links without 404
       - name: Add 404.html for SPA
         run: cp dist/index.html dist/404.html
 
@@ -51,3 +50,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
